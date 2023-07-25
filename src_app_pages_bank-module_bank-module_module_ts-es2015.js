@@ -229,10 +229,8 @@ class AddBankComponent {
                 this.bankService.postBankDetails(body, this.currentUser.id).then((res) => {
                     if (res) {
                         this.toastService.openSnackBar("Bank Record Added Successfully!!!");
-                        // this.getbankdetails();
-                        // this.modal.dismissAll();
-                        this.bankForm.reset();
-                        this.submitted = false;
+                        this.router.navigate(["/pages/Bank-page"]);
+                        this.bankService.notifyPartyAdded();
                         this.dialogRef.close();
                     }
                 }, (err) => {
@@ -688,30 +686,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "BanKDetailsComponent": function() { return /* binding */ BanKDetailsComponent; }
 /* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ 1707);
+/* harmony import */ var _add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../add-bank/add-bank.component */ 43701);
+/* harmony import */ var _add_cash_add_cash_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../add-cash/add-cash.component */ 73106);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ 71258);
+/* harmony import */ var src_app_core_services_toast_notification_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/core/services/toast-notification.service */ 96636);
+/* harmony import */ var src_app_core_services_bank_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/core/services/bank-service.service */ 91068);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ 53882);
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ 81288);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common */ 54364);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ 1707);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! rxjs/operators */ 1143);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! rxjs/operators */ 33927);
-/* harmony import */ var src_app_helpers_confirmed_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/_helpers/confirmed.validators */ 93483);
-/* harmony import */ var src_app_helpers_constant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_helpers/constant */ 22336);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ 2281);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../add-bank/add-bank.component */ 43701);
-/* harmony import */ var _add_cash_add_cash_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../add-cash/add-cash.component */ 73106);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 2316);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/router */ 71258);
-/* harmony import */ var src_app_core_services_toast_notification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/core/services/toast-notification.service */ 96636);
-/* harmony import */ var src_app_core_services_bank_service_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/core/services/bank-service.service */ 91068);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common/http */ 53882);
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ 81288);
-/* harmony import */ var src_app_core_services_cash_in_hand_service_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/core/services/cash-in-hand-service.service */ 70039);
-/* harmony import */ var src_app_core_services_sale_invoice_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/core/services/sale-invoice.service */ 26287);
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/dialog */ 22213);
-
-
-
-
-
+/* harmony import */ var src_app_core_services_cash_in_hand_service_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/core/services/cash-in-hand-service.service */ 70039);
+/* harmony import */ var src_app_core_services_sale_invoice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/core/services/sale-invoice.service */ 26287);
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/dialog */ 22213);
 
 
 
@@ -727,34 +714,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function BanKDetailsComponent_tbody_37_tr_1_Template(rf, ctx) { if (rf & 1) {
-    const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "td", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("click", function BanKDetailsComponent_tbody_37_tr_1_Template_td_click_1_listener() { const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵrestoreView"](_r5); const bankData_r2 = restoredCtx.$implicit; const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵnextContext"](2); return ctx_r4.getbankdetailsById(bankData_r2.id); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](2, "span", 37);
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](3, "img", 38);
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](4, "span", 39);
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](6, "td", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](7, "20000");
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
+    const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "td", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("click", function BanKDetailsComponent_tbody_37_tr_1_Template_td_click_1_listener() { const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵrestoreView"](_r5); const bankData_r2 = restoredCtx.$implicit; const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"](2); return ctx_r4.getbankdetailsById(bankData_r2.id); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](2, "span", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](3, "img", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](4, "span", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](6, "td", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](7, "20000");
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const bankData_r2 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate"](bankData_r2.bankName);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate"](bankData_r2.bankName);
 } }
 function BanKDetailsComponent_tbody_37_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](1, BanKDetailsComponent_tbody_37_tr_1_Template, 8, 1, "tr", 35);
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "tbody");
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtemplate"](1, BanKDetailsComponent_tbody_37_tr_1_Template, 8, 1, "tr", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngForOf", ctx_r0.bankApiResponse);
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("ngForOf", ctx_r0.bankApiResponse);
 } }
 class BanKDetailsComponent {
     constructor(formBuilder, router, toastService, bankService, http, modal, titleCasePipe, cashInHandService, saleInvoiceService, dialog) {
@@ -768,43 +755,9 @@ class BanKDetailsComponent {
         this.cashInHandService = cashInHandService;
         this.saleInvoiceService = saleInvoiceService;
         this.dialog = dialog;
-        this.myControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormControl();
+        this.myControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_7__.FormControl();
         this.color = 'black';
         this.isEdit = false;
-        this.BankData = [
-            {
-                "id": "1",
-                "IFSC": "MAHB0000002",
-                "BANK": "Bank of Maharashtra",
-                "AccountNumber": "MH120123444454",
-                "BRANCH": "FORT BRANCH , MUMBAI",
-                "isEnable": false,
-            },
-            {
-                "id": "2",
-                "IFSC": "UTIB0000037",
-                "BANK": "Axis Bank",
-                "AccountNumber": "MH120123444454",
-                "BRANCH": "FORT BRANCH , MUMBAI",
-                "isEnable": false,
-            },
-            {
-                "id": "3",
-                "IFSC": "HDFC0000002",
-                "BANK": "HDFC Bank",
-                "AccountNumber": "MH120123444454",
-                "BRANCH": "FORT BRANCH , MUMBAI",
-                "isEnable": false,
-            },
-            {
-                "id": "4",
-                "IFSC": "SBIN0000371",
-                "BANK": "State Bank of India",
-                "AccountNumber": "MH120123444454",
-                "BRANCH": "ACHALPUR",
-                "isEnable": false,
-            },
-        ];
         this.isDisabled = false;
         this.isShowButton = false;
         this.isShown = false;
@@ -816,63 +769,10 @@ class BanKDetailsComponent {
         this.paymentType = "";
     }
     ngOnInit() {
-        this.todaysDate = new Date();
-        this.todaysDate = (0,_angular_common__WEBPACK_IMPORTED_MODULE_11__.formatDate)(this.todaysDate, 'yyyy-MM-dd', 'en-US');
-        console.log("date", this.todaysDate);
-        this.bankForm = this.formBuilder.group({
-            IFSC: ["", [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.pattern('^[A-Za-z]{4}0[0-9]{6}$')]],
-            AccountHolderName: ["", [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required]],
-            BankName: ["", [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required]],
-            AccountNumber: ["", [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.pattern("^[0-9]*$"), _angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.minLength(9), _angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.maxLength(19)]],
-            ConfirmAccountNumber: ["", [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.pattern("^[0-9]*$"), _angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.minLength(9), _angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.maxLength(19)]],
-            Branch: ["", [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required]],
-        }, {
-            validator: (0,src_app_helpers_confirmed_validators__WEBPACK_IMPORTED_MODULE_0__.ConfirmedValidators)('AccountNumber', 'ConfirmAccountNumber')
-        });
-        this.bankdetails = src_app_helpers_constant__WEBPACK_IMPORTED_MODULE_1__.Constants.bankNames;
-        this.bankdetails.sort((a, b) => a.bankName > b.bankName ? 1 : -1);
-        this.filteredOptions = this.bankForm.controls.BankName.valueChanges
-            .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_12__.startWith)(''), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_13__.map)(name => name ? this.filterBankNames(name) : this.bankdetails.slice()));
-        this.CashInHandForm = this.formBuilder.group({
-            currentBal: [],
-            date: [],
-            paymentType: ["", [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required]],
-            saleInvoiceNo: [],
-            enterAmount: [, [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required]],
-            // NewAmount: [ ,[Validators.required]],
-            NewBalance: [, [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required]],
-            formRemark: ["", [_angular_forms__WEBPACK_IMPORTED_MODULE_10__.Validators.required]],
-            // denomination: [ ,[Validators.required]],
-            // noOfPieces: [ ,[Validators.required]],
-            // total: [,[Validators.required]],
-            // coin: [],
-            // grandTotal: [ ,[Validators.required]],
-            // fivehundred: [],
-            // nofivehundred: [],
-            // totalfivehundred: [],
-            // hundred: [],
-            // nohundred: [],
-            // totalhundred: [],
-            // fifty: [],
-            // nofifty: [],
-            // totalfifty: [],
-            // twenty: [],
-            // notwenty: [],
-            // totaltwenty: [],
-            // ten: [],
-            // noten: [],
-            // totalten: [],
-            // five: [],
-            // nofive: [],
-            // totalfive: []
-        });
         this.getbankdetails();
-        // this.getbankdetailsById();
-        // this.getBankIFSC();
-        this.getCurrentBal();
-    }
-    get f1() {
-        return this.CashInHandForm.controls;
+        this.bankService.partyAdded$.subscribe(() => {
+            this.getbankdetails();
+        });
     }
     /**
      * Filter customer name search
@@ -884,14 +784,13 @@ class BanKDetailsComponent {
     }
     getbankdetails() {
         this.bankService.getBankDetails({}, this.currentUser.id).then((res) => {
-            console.log("new Api:", res);
             this.bankApiResponse = res.data;
             this.bankApiResponse.forEach((ele) => {
                 ele.isEnable = false;
             });
         }, (err) => {
             if (err.error.expose) {
-                this.bankApiResponse = [];
+                //   this.bankApiResponse = [];
                 this.toastService.openErrorSnackBar(this.titleCasePipe.transform(err.error.error_message));
             }
             else {
@@ -913,10 +812,6 @@ class BanKDetailsComponent {
             this.singleIfscCode = this.singleBankRecord.ifscCode;
         });
     }
-    // getBankIFSC(ifscCode:any){
-    //   this.bankService.getBankDetailsByIFSC({}, this.currentUser.id).then((res) => {
-    //   })
-    // }
     removeBanK() {
         this.bankService.deleteBankAccNo({}, this.accoutNumber).then((res) => {
             this.toastService.openSnackBar("Bank Record Deleted Successfully!!!");
@@ -933,127 +828,13 @@ class BanKDetailsComponent {
             }
         });
     }
-    getIFSCCode(ifscCode) {
-        if (ifscCode) {
-            let body = {
-                "bankDetails": {
-                    "ifscCode": this.bankForm.controls.IFSC.value
-                }
-            };
-            this.bankService.getBankDetailsByIFSC(body, this.currentUser.id).then((res) => {
-                this.bankForm.patchValue({
-                    'BankName': res.data.bankName,
-                    'Branch': this.titleCasePipe.transform(res.data.branchCode)
-                });
-                this.toastService.openSnackBar("IFSC Code Validated Successfully!!!");
-            }, (err) => {
-                this.toastService.openErrorSnackBar(this.titleCasePipe.transform(err.error.error_message));
-            });
-            // this.http.get("https://ifsc.razorpay.com/" + ifscCode).subscribe((res) => {
-            //   this.data = res;
-            //   // this.branchCode = this.data.BANKCODE;
-            //   this.branchCode = this.data.BRANCH;
-            //   this.bankForm.patchValue({
-            //     'IFSC': this.data.IFSC,
-            //     'BankName': this.data.BANK,
-            //     'Branch': this.titleCasePipe.transform(this.data.BRANCH)
-            //   })
-            // });
-        }
-    }
-    BankDatasave() {
-        this.submitted = true;
-        this.isEdit = false;
-        if (this.bankForm.invalid) {
-            this.toastService.openErrorSnackBar("Please Fill Mandatory Fields!!!");
-            return false;
-        }
-        else {
-            let body = {
-                "bankDetails": {
-                    "bankName": this.bankForm.controls.BankName.value,
-                    "branchCode": this.bankForm.controls.Branch.value,
-                    "accountNumber": this.bankForm.controls.AccountNumber.value,
-                    "ifscCode": this.bankForm.controls.IFSC.value.toUpperCase(),
-                    "accountHolderName": this.bankForm.controls.AccountHolderName.value
-                }
-            };
-            if (this.bankForm.valid) {
-                this.bankService.postBankDetails(body, this.currentUser.id).then((res) => {
-                    if (res) {
-                        this.toastService.openSnackBar("Bank Record Added Successfully!!!");
-                        // this.getbankdetails();
-                        // this.modal.dismissAll();
-                        this.bankForm.reset();
-                        this.submitted = false;
-                    }
-                }, (err) => {
-                    this.toastService.openErrorSnackBar(this.titleCasePipe.transform(err.error.error_message));
-                });
-            }
-        }
-    }
-    bankUpdate() {
-        if (this.bankForm.valid) {
-            let body = {
-                "bankDetails": {
-                    "bankName": this.bankForm.controls.BankName.value,
-                    "branchCode": this.bankForm.controls.Branch.value,
-                    "accountNumber": this.bankForm.controls.AccountNumber.value,
-                    "ifscCode": this.bankForm.controls.IFSC.value.toUpperCase(),
-                }
-            };
-            this.bankService.updateBankDetails(body, this.bankDetailByAcc.accountNumber).then((res) => {
-                this.toastService.openSnackBar("Bank Record Updated Successfully!!!");
-                this.getbankdetails();
-                this.bankForm.reset();
-                this.submitted = false;
-                this.modal.dismissAll();
-            });
-            this.isEdit = false;
-        }
-    }
-    editItem(bank) {
-        this.isEdit = true;
-        this.bankService.getBankDetailsByAcc({}, bank).then((res) => {
-            this.bankDetailByAcc = res.data;
-            this.bankForm.patchValue({
-                'id': this.bankDetailByAcc.id,
-                'IFSC': this.bankDetailByAcc.ifscCode,
-                'BankName': this.bankDetailByAcc.bankName,
-                'AccountNumber': this.bankDetailByAcc.accountNumber,
-                'Branch': this.bankDetailByAcc.branchCode,
-                'ConfirmAccountNumber': this.bankDetailByAcc.accountNumber
-            });
-        });
-    }
-    get f() {
-        return this.bankForm.controls;
-    }
     modalDismiss() {
         this.bankForm.reset();
         this.modal.dismissAll();
         this.isEdit = false;
     }
-    getBanKBYACC(accNumer) {
-        this.accoutNumber = accNumer;
-    }
-    numberOnly(event) {
-        const charCode = (event.which) ? event.which : event.keyCode;
-        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-            return false;
-        }
-        return true;
-    }
-    openAddBankModal(modal) {
-        this.modal.open(modal, {
-            centered: false,
-            backdrop: "static",
-            size: "md"
-        });
-    }
     openDialogBank() {
-        const dialogRef = this.dialog.open(_add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_3__.AddBankComponent, {
+        const dialogRef = this.dialog.open(_add_bank_add_bank_component__WEBPACK_IMPORTED_MODULE_0__.AddBankComponent, {
             width: 'auto',
             height: '700px',
             data: {},
@@ -1065,7 +846,7 @@ class BanKDetailsComponent {
         });
     }
     openDialogCash() {
-        const dialogRef = this.dialog.open(_add_cash_add_cash_component__WEBPACK_IMPORTED_MODULE_4__.AddCashComponent, {
+        const dialogRef = this.dialog.open(_add_cash_add_cash_component__WEBPACK_IMPORTED_MODULE_1__.AddCashComponent, {
             width: 'auto',
             height: '700px',
             data: {},
@@ -1076,349 +857,245 @@ class BanKDetailsComponent {
             console.log(`Dialog result: ${result}`);
         });
     }
-    // Cash In Hand
-    getCurrentBal() {
-        this.cashInHandService.getCurrentBalance({}, this.currentUser.id).then((res) => {
-            // this.CashInHandForm = res.data[0].currentBalance;
-            this.CashInHandForm.patchValue({
-                currentBal: res.data[0].currentBalance,
-            });
-        }, (err) => {
-            if (err.error.expose) {
-                this.toastService.openErrorSnackBar(this.titleCasePipe.transform(err.error.error_message));
-            }
-            else {
-                this.toastService.openErrorSnackBar("Something Went Wrong.");
-            }
-        });
-    }
-    openCashandModal(modal) {
-        this.modal.open(modal, {
-            centered: false,
-            backdrop: "static",
-            size: "md"
-        });
-    }
-    modalDismissCashInHand() {
-        this.CashInHandForm.reset();
-        this.modal.dismissAll();
-    }
-    GetpartyId(e) {
-        if (e) {
-            this.saleInvoiceService.getsaleInvoiceByIncoice({}, this.currentUser.id, e).then((res) => {
-                this.partyId = res.data.pageData[0].partyId;
-                this.saleInvoiceId = res.data.pageData[0].id;
-            });
-        }
-    }
-    addMoney() {
-        this.paymentType = "PAYMENT";
-        console.log("payment", this.paymentType);
-    }
-    reduceMoney() {
-        this.paymentType = "RECEIPT";
-        console.log("receipt", this.paymentType);
-    }
-    save() {
-        console.log("remark2", this.remark2);
-        this.submitted = true;
-        // if (this.CashInHandForm.invalid) {
-        //   this.toastService.openErrorSnackBar("Please Fill Mandatory Fields!!!");
-        //   return false;
-        // }
-        let body = {
-            "cashadjustments": {
-                "paymentType": this.paymentType,
-                "saleInvoiceId": this.saleInvoiceId ? this.saleInvoiceId : null,
-                // asOfDate: moment(
-                //   this.ProductForm.controls.asOfDate.value,
-                //   "DD MMM YYYY"
-                // ).format("YYYY-MM-DD""YYYY-MM-DD"),
-                date: moment__WEBPACK_IMPORTED_MODULE_2__(this.CashInHandForm.controls.date.value, "DD MMM YYYY").format("YYYY-MM-DD"),
-                // "date":this.CashInHandForm.controls.date.value,
-                "enterAmount": this.CashInHandForm.controls.enterAmount.value,
-                // "newAmount": this.CashInHandForm.controls.NewAmount.value,
-                // "newBalance": this.CashInHandForm.controls.NewBalance.value,
-                // "grandTotal":  this.CashInHandForm.controls.grandTotal.value,
-                // "coins":0,
-                "remark": this.CashInHandForm.controls.formRemark.value,
-                "userId": this.currentUser.id
-            },
-        };
-        console.log("body", body);
-        this.cashInHandService.cashInHandpost(body).then((res) => {
-            this.toastService.openSnackBar("Cash In Hand Updated");
-            this.CashInHandForm.reset();
-            this.submitted = false;
-            this.getCurrentBal();
-        }, (err) => {
-            if (err.error.expose) {
-                this.toastService.openErrorSnackBar(this.titleCasePipe.transform(err.error.error_message));
-            }
-            else {
-                this.toastService.openErrorSnackBar("Something Went Wrong.");
-            }
-        });
-    }
-    clearInput() {
-        this.CashInHandForm.reset();
-        this.modal.dismissAll();
-        this.submitted = false;
-        this.getCurrentBal();
-    }
-    calculateValues() {
-        if (this.paymentType == "PAYMENT") {
-            this.CashInHandForm.patchValue({
-                NewBalance: +this.CashInHandForm.controls.currentBal.value + +this.CashInHandForm.controls.enterAmount.value
-            });
-        }
-        else {
-            this.CashInHandForm.patchValue({
-                NewBalance: +this.CashInHandForm.controls.currentBal.value - +this.CashInHandForm.controls.enterAmount.value
-            });
-        }
-    }
     cancel() {
-        //  this.expenseForm.reset();
-        // this.submitted = false;
         this.dialogRef.close();
     }
 }
-BanKDetailsComponent.ɵfac = function BanKDetailsComponent_Factory(t) { return new (t || BanKDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_10__.FormBuilder), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_14__.Router), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](src_app_core_services_toast_notification_service__WEBPACK_IMPORTED_MODULE_5__.ToastNotificationService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](src_app_core_services_bank_service_service__WEBPACK_IMPORTED_MODULE_6__.BankServiceService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_15__.HttpClient), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__.NgbModal), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_11__.TitleCasePipe), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](src_app_core_services_cash_in_hand_service_service__WEBPACK_IMPORTED_MODULE_7__.CashInHandServiceService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](src_app_core_services_sale_invoice_service__WEBPACK_IMPORTED_MODULE_8__.SaleInvoiceService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_17__.MatDialog)); };
-BanKDetailsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({ type: BanKDetailsComponent, selectors: [["app-ban-kdetails"]], decls: 138, vars: 4, consts: [["id", "errorDelete-modal", "tabindex", "-1", "role", "dialog", "aria-hidden", "true", 1, "modal", "fade"], ["role", "document", 1, "modal-dialog", "modal-dialog-centered", 2, "max-width", "350px"], [1, "modal-content", "position-relative"], [1, "position-absolute", "top-0", "end-0", "mt-2", "me-2", "z-index-1"], ["data-bs-dismiss", "modal", "aria-label", "Close", 1, "btn-close", "btn", "btn-sm", "btn-circle", "d-flex", "flex-center", "transition-base"], [1, "modal-body", "p-0"], [1, "rounded-top-lg", "py-3", "ps-4", "pe-6", "bg-light"], ["id", "modalExampleDemoLabel", 1, "mb-1", "text-center", "font-weight-bold", 2, "font-weight", "800"], [1, "text-center"], [1, "modal-footer", "justify-content-center"], ["data-bs-dismiss", "modal", 1, "btn", "btn-outline-primary"], ["data-bs-dismiss", "modal", 1, "btn", "btn-outline-primary", 3, "click"], [1, "container-fluid", "p-2", 2, "height", "100vh !important"], [1, "row", "card-header", "bg-white"], [1, "col-lg-12", "navOption-btns"], ["type", "button", 1, "btn", "m-1", 2, "float", "right !important", 3, "click"], [1, "fas", "fa-plus", "me-2"], [1, "row", "mt-1"], [1, "col-lg-3", "bg-light", "mt-2"], [1, "m-3", 2, "font-weight", "bolder"], [1, "table", "table-responsive", "fs--1", "mb-0"], [1, "text-600"], [1, "text-nowrap"], [4, "ngIf"], [1, "mb-3", "mx-3", 2, "margin-top", "100px"], [2, "font-weight", "bolder"], [1, "col-lg-9"], [1, "row", "bg-light", "m-2"], [1, "mb-1", "mt-2"], [1, "me-3"], [1, "mb-2", "mt-1"], [1, "mb-1", "mt-1"], [1, "mb-1", "mt-1", "d-flex", "flex-row", 2, "justify-content", "end"], [1, "m-3"], [2, "vertical-align", "middle"], [4, "ngFor", "ngForOf"], [2, "vertical-align", "middle", 3, "click"], [2, "float", "left"], ["src", "../../../../assets/images/bank_logo.png"], [2, "float", "left", "padding-left", "10px", "padding-top", "5px", "color", "#000"], [2, "vertical-align", "middle", "color", "#000"]], template: function BanKDetailsComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](2, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](3, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](4, "a", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](5, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](6, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](7, "h2", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](8, " Delete Bank Account? ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](9, "h4", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](10, "Are You Sure To Delete this Bank Account?");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](11, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](12, "a", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](13, "Close");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](14, "a", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("click", function BanKDetailsComponent_Template_a_click_14_listener() { return ctx.removeBanK(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](15, "Delete ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](16, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](17, "div", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](18, "div", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](19, "button", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("click", function BanKDetailsComponent_Template_button_click_19_listener() { return ctx.openDialogCash(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](20, "i", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](21, "Add Cash in hand ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](22, "button", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("click", function BanKDetailsComponent_Template_button_click_22_listener() { return ctx.openDialogBank(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](23, "i", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](24, "Add Bank ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](25, "div", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](26, "div", 18);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](27, "p", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](28, "Bank Details");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](29, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](30, "table", 20);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](31, "thead", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](32, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](33, "th", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](34, "Account");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](35, "th", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](36, "Amount");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](37, BanKDetailsComponent_tbody_37_Template, 2, 1, "tbody", 23);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](38, "div", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](39, "p", 25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](40, "Cash In Hand");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](41, "div", 26);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](42, "div", 27);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](43, "p", 28);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](44, "span", 29);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](45, "Bank Name :");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](46);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](47, "p", 30);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](48);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](49, "p", 31);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](50);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](51, "p", 32);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](52, " Balance: 200000.00 ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](53, "div", 27);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](54, "div", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](55, "p", 25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](56, "Transactions");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](57, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](58, "table", 20);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](59, "thead", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](60, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](61, "th", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](62, "Date of Payment");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](63, "th", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](64, "Name");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](65, "th", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](66, "Type");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](67, "th", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](68, "Amount");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](69, "th", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](70, "Remarks");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](71, "tbody");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](72, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](73, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](74, "9-June-2023");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](75, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](76, "Vishal");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](77, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](78, "Payment-In");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](79, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](80, "2000.00");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](81, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](82, "Excellent");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](83, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](84, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](85, "10-June-2023");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](86, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](87, "Vishwas");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](88, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](89, "Payment-In");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](90, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](91, "20007.00");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](92, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](93, "Excellent");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](94, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](95, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](96, "10-June-2023");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](97, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](98, "Vishwas");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](99, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](100, "Payment-In");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](101, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](102, "20007.00");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](103, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](104, "Excellent");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](105, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](106, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](107, "10-June-2023");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](108, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](109, "Vishwas");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](110, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](111, "Payment-In");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](112, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](113, "20007.00");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](114, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](115, "Excellent");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](116, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](117, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](118, "10-June-2023");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](119, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](120, "Vishwas");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](121, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](122, "Payment-In");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](123, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](124, "20007.00");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](125, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](126, "Excellent");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](127, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](128, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](129, "10-June-2023");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](130, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](131, "Vishwas");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](132, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](133, "Payment-In");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](134, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](135, "20007.00");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](136, "td", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](137, "Excellent");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
+BanKDetailsComponent.ɵfac = function BanKDetailsComponent_Factory(t) { return new (t || BanKDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_7__.FormBuilder), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_8__.Router), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](src_app_core_services_toast_notification_service__WEBPACK_IMPORTED_MODULE_2__.ToastNotificationService), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](src_app_core_services_bank_service_service__WEBPACK_IMPORTED_MODULE_3__.BankServiceService), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_9__.HttpClient), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__.NgbModal), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_11__.TitleCasePipe), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](src_app_core_services_cash_in_hand_service_service__WEBPACK_IMPORTED_MODULE_4__.CashInHandServiceService), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](src_app_core_services_sale_invoice_service__WEBPACK_IMPORTED_MODULE_5__.SaleInvoiceService), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_12__.MatDialog)); };
+BanKDetailsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: BanKDetailsComponent, selectors: [["app-ban-kdetails"]], decls: 138, vars: 4, consts: [["id", "errorDelete-modal", "tabindex", "-1", "role", "dialog", "aria-hidden", "true", 1, "modal", "fade"], ["role", "document", 1, "modal-dialog", "modal-dialog-centered", 2, "max-width", "350px"], [1, "modal-content", "position-relative"], [1, "position-absolute", "top-0", "end-0", "mt-2", "me-2", "z-index-1"], ["data-bs-dismiss", "modal", "aria-label", "Close", 1, "btn-close", "btn", "btn-sm", "btn-circle", "d-flex", "flex-center", "transition-base"], [1, "modal-body", "p-0"], [1, "rounded-top-lg", "py-3", "ps-4", "pe-6", "bg-light"], ["id", "modalExampleDemoLabel", 1, "mb-1", "text-center", "font-weight-bold", 2, "font-weight", "800"], [1, "text-center"], [1, "modal-footer", "justify-content-center"], ["data-bs-dismiss", "modal", 1, "btn", "btn-outline-primary"], ["data-bs-dismiss", "modal", 1, "btn", "btn-outline-primary", 3, "click"], [1, "container-fluid", "p-2", 2, "height", "100vh !important"], [1, "row", "card-header", "bg-white"], [1, "col-lg-12", "navOption-btns"], ["type", "button", 1, "btn", "m-1", 2, "float", "right !important", 3, "click"], [1, "fas", "fa-plus", "me-2"], [1, "row", "mt-1"], [1, "col-lg-3", "bg-light", "mt-2"], [1, "m-3", 2, "font-weight", "bolder"], [1, "table", "table-responsive", "fs--1", "mb-0"], [1, "text-600"], [1, "text-nowrap"], [4, "ngIf"], [1, "mb-3", "mx-3", 2, "margin-top", "100px"], [2, "font-weight", "bolder"], [1, "col-lg-9"], [1, "row", "bg-light", "m-2"], [1, "mb-1", "mt-2"], [1, "me-3"], [1, "mb-2", "mt-1"], [1, "mb-1", "mt-1"], [1, "mb-1", "mt-1", "d-flex", "flex-row", 2, "justify-content", "end"], [1, "m-3"], [2, "vertical-align", "middle"], [4, "ngFor", "ngForOf"], [2, "vertical-align", "middle", 3, "click"], [2, "float", "left"], ["src", "../../../../assets/images/bank_logo.png"], [2, "float", "left", "padding-left", "10px", "padding-top", "5px", "color", "#000"], [2, "vertical-align", "middle", "color", "#000"]], template: function BanKDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](4, "a", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](5, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](6, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](7, "h2", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](8, " Delete Bank Account? ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](9, "h4", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](10, "Are You Sure To Delete this Bank Account?");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](11, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](12, "a", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](13, "Close");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](14, "a", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("click", function BanKDetailsComponent_Template_a_click_14_listener() { return ctx.removeBanK(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](15, "Delete ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](16, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](17, "div", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](18, "div", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](19, "button", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("click", function BanKDetailsComponent_Template_button_click_19_listener() { return ctx.openDialogCash(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](20, "i", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](21, "Add Cash in hand ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](22, "button", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("click", function BanKDetailsComponent_Template_button_click_22_listener() { return ctx.openDialogBank(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](23, "i", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](24, "Add Bank ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](25, "div", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](26, "div", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](27, "p", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](28, "Bank Details");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](29, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](30, "table", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](31, "thead", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](32, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](33, "th", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](34, "Account");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](35, "th", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](36, "Amount");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtemplate"](37, BanKDetailsComponent_tbody_37_Template, 2, 1, "tbody", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](38, "div", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](39, "p", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](40, "Cash In Hand");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](41, "div", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](42, "div", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](43, "p", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](44, "span", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](45, "Bank Name :");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](47, "p", 30);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](48);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](49, "p", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](50);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](51, "p", 32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](52, " Balance: 200000.00 ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](53, "div", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](54, "div", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](55, "p", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](56, "Transactions");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](57, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](58, "table", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](59, "thead", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](60, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](61, "th", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](62, "Date of Payment");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](63, "th", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](64, "Name");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](65, "th", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](66, "Type");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](67, "th", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](68, "Amount");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](69, "th", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](70, "Remarks");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](71, "tbody");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](72, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](73, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](74, "9-June-2023");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](75, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](76, "Vishal");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](77, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](78, "Payment-In");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](79, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](80, "2000.00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](81, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](82, "Excellent");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](83, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](84, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](85, "10-June-2023");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](86, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](87, "Vishwas");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](88, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](89, "Payment-In");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](90, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](91, "20007.00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](92, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](93, "Excellent");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](94, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](95, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](96, "10-June-2023");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](97, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](98, "Vishwas");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](99, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](100, "Payment-In");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](101, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](102, "20007.00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](103, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](104, "Excellent");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](105, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](106, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](107, "10-June-2023");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](108, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](109, "Vishwas");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](110, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](111, "Payment-In");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](112, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](113, "20007.00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](114, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](115, "Excellent");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](116, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](117, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](118, "10-June-2023");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](119, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](120, "Vishwas");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](121, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](122, "Payment-In");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](123, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](124, "20007.00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](125, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](126, "Excellent");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](127, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](128, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](129, "10-June-2023");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](130, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](131, "Vishwas");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](132, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](133, "Payment-In");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](134, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](135, "20007.00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](136, "td", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](137, "Excellent");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](37);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngIf", ctx.bankApiResponse);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate"](ctx.singleBankName ? ctx.singleBankName : "");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate1"]("Account Number: ", ctx.singleBankAcc ? ctx.singleBankAcc : "", "");
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate1"]("IFSC Code: ", ctx.singleIfscCode ? ctx.singleIfscCode : "", "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](37);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵproperty"]("ngIf", ctx.bankApiResponse);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate"](ctx.singleBankName ? ctx.singleBankName : "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate1"]("Account Number: ", ctx.singleBankAcc ? ctx.singleBankAcc : "", "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtextInterpolate1"]("IFSC Code: ", ctx.singleIfscCode ? ctx.singleIfscCode : "", "");
     } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_11__.NgIf, _angular_common__WEBPACK_IMPORTED_MODULE_11__.NgForOf], styles: [".custom-dialog-expense-class {\n  margin-left: 50%;\n  overflow: hidden !important;\n  height: 100vh !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhbi1rZGV0YWlscy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFBO0VBQ0EsMkJBQUE7RUFDQSx3QkFBQTtBQUNKIiwiZmlsZSI6ImJhbi1rZGV0YWlscy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjo6bmctZGVlcCAuY3VzdG9tLWRpYWxvZy1leHBlbnNlLWNsYXNzIHtcclxuICAgIG1hcmdpbi1sZWZ0OiA1MCU7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuICFpbXBvcnRhbnQ7XHJcbiAgICBoZWlnaHQ6IDEwMHZoICFpbXBvcnRhbnQ7XHJcbiAgfSJdfQ== */"] });
 
 

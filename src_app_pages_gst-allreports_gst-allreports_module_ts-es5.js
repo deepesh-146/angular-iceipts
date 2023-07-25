@@ -452,7 +452,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-option", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "GST Report3-b");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "GST Report 3-b");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -476,7 +476,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "mat-option", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "GST Report2-a");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "GST Report 2-a");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 

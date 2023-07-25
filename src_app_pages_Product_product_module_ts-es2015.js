@@ -129,14 +129,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ProductModule": function() { return /* binding */ ProductModule; }
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 54364);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ 54364);
 /* harmony import */ var _product_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-routing.module */ 17946);
 /* harmony import */ var _product_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./product.component */ 30021);
 /* harmony import */ var _productlist_view_productlist_view_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./productlist-view/productlist-view.component */ 75181);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ 1707);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ 1707);
 /* harmony import */ var _servicelist_view_servicelist_view_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./servicelist-view/servicelist-view.component */ 61470);
 /* harmony import */ var _offerlist_view_offerlist_view_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./offerlist-view/offerlist-view.component */ 14067);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var src_app_material_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/material.module */ 63806);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 2316);
+
 
 
 
@@ -148,20 +150,22 @@ __webpack_require__.r(__webpack_exports__);
 class ProductModule {
 }
 ProductModule.ɵfac = function ProductModule_Factory(t) { return new (t || ProductModule)(); };
-ProductModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineNgModule"]({ type: ProductModule });
-ProductModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector"]({ imports: [[
-            _angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule,
+ProductModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({ type: ProductModule });
+ProductModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({ imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule,
             _product_routing_module__WEBPACK_IMPORTED_MODULE_0__.ProductRoutingModule,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_7__.FormsModule,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_7__.ReactiveFormsModule
+            _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_8__.ReactiveFormsModule,
+            src_app_material_module__WEBPACK_IMPORTED_MODULE_5__.MaterialExampleModule
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵsetNgModuleScope"](ProductModule, { declarations: [_product_component__WEBPACK_IMPORTED_MODULE_1__.ProductComponent,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](ProductModule, { declarations: [_product_component__WEBPACK_IMPORTED_MODULE_1__.ProductComponent,
         _productlist_view_productlist_view_component__WEBPACK_IMPORTED_MODULE_2__.ProductlistViewComponent,
         _servicelist_view_servicelist_view_component__WEBPACK_IMPORTED_MODULE_3__.ServicelistViewComponent,
-        _offerlist_view_offerlist_view_component__WEBPACK_IMPORTED_MODULE_4__.OfferlistViewComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule,
+        _offerlist_view_offerlist_view_component__WEBPACK_IMPORTED_MODULE_4__.OfferlistViewComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule,
         _product_routing_module__WEBPACK_IMPORTED_MODULE_0__.ProductRoutingModule,
-        _angular_forms__WEBPACK_IMPORTED_MODULE_7__.FormsModule,
-        _angular_forms__WEBPACK_IMPORTED_MODULE_7__.ReactiveFormsModule] }); })();
+        _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule,
+        _angular_forms__WEBPACK_IMPORTED_MODULE_8__.ReactiveFormsModule,
+        src_app_material_module__WEBPACK_IMPORTED_MODULE_5__.MaterialExampleModule] }); })();
 
 
 /***/ })

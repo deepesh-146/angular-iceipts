@@ -275,7 +275,7 @@
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @angular/common */
       54364);
       /* harmony import */
@@ -299,7 +299,7 @@
       /* harmony import */
 
 
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! @angular/forms */
       1707);
       /* harmony import */
@@ -317,7 +317,13 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_material_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/material.module */
+      63806);
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/core */
       2316);
 
@@ -329,17 +335,17 @@
         return new (t || _ProductModule)();
       };
 
-      _ProductModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineNgModule"]({
+      _ProductModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({
         type: _ProductModule
       });
-      _ProductModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector"]({
-        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule, _product_routing_module__WEBPACK_IMPORTED_MODULE_0__.ProductRoutingModule, _angular_forms__WEBPACK_IMPORTED_MODULE_7__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_7__.ReactiveFormsModule]]
+      _ProductModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({
+        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _product_routing_module__WEBPACK_IMPORTED_MODULE_0__.ProductRoutingModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.ReactiveFormsModule, src_app_material_module__WEBPACK_IMPORTED_MODULE_5__.MaterialExampleModule]]
       });
 
       (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵsetNgModuleScope"](_ProductModule, {
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](_ProductModule, {
           declarations: [_product_component__WEBPACK_IMPORTED_MODULE_1__.ProductComponent, _productlist_view_productlist_view_component__WEBPACK_IMPORTED_MODULE_2__.ProductlistViewComponent, _servicelist_view_servicelist_view_component__WEBPACK_IMPORTED_MODULE_3__.ServicelistViewComponent, _offerlist_view_offerlist_view_component__WEBPACK_IMPORTED_MODULE_4__.OfferlistViewComponent],
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule, _product_routing_module__WEBPACK_IMPORTED_MODULE_0__.ProductRoutingModule, _angular_forms__WEBPACK_IMPORTED_MODULE_7__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_7__.ReactiveFormsModule]
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _product_routing_module__WEBPACK_IMPORTED_MODULE_0__.ProductRoutingModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.ReactiveFormsModule, src_app_material_module__WEBPACK_IMPORTED_MODULE_5__.MaterialExampleModule]
         });
       })();
       /***/
