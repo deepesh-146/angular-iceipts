@@ -1,6 +1,33 @@
 "use strict";
 (self["webpackChunkweb_app"] = self["webpackChunkweb_app"] || []).push([["src_app_pages_Party_party_module_ts"],{
 
+/***/ 5702:
+/*!************************************************************************************!*\
+  !*** ./src/app/pages/Party/continue-popup-modal/continue-popup-modal.component.ts ***!
+  \************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ContinuePopupModalComponent": function() { return /* binding */ ContinuePopupModalComponent; }
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2316);
+
+class ContinuePopupModalComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+ContinuePopupModalComponent.ɵfac = function ContinuePopupModalComponent_Factory(t) { return new (t || ContinuePopupModalComponent)(); };
+ContinuePopupModalComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContinuePopupModalComponent, selectors: [["app-continue-popup-modal"]], decls: 2, vars: 0, template: function ContinuePopupModalComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "continue-popup-modal works!");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjb250aW51ZS1wb3B1cC1tb2RhbC5jb21wb25lbnQuc2NzcyJ9 */"] });
+
+
+/***/ }),
+
 /***/ 20218:
 /*!****************************************************************************!*\
   !*** ./src/app/pages/Party/party-group-list/party-group-list.component.ts ***!
@@ -1579,20 +1606,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "PartyModule": function() { return /* binding */ PartyModule; }
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ 54364);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ 54364);
 /* harmony import */ var _party_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./party-routing.module */ 47035);
 /* harmony import */ var _party_list_party_list_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./party-list/party-list.component */ 64425);
 /* harmony import */ var _party_group_list_party_group_list_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./party-group-list/party-group-list.component */ 20218);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ 71258);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ 1707);
-/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/paginator */ 38021);
-/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/form-field */ 65788);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/router */ 71258);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ 1707);
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/paginator */ 38021);
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/form-field */ 65788);
 /* harmony import */ var _delete_modal_delete_modal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./delete-modal/delete-modal.component */ 19265);
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/icon */ 52529);
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/icon */ 52529);
 /* harmony import */ var _view_party_view_party_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./view-party/view-party.component */ 80865);
 /* harmony import */ var _view_party_group_view_party_group_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./view-party-group/view-party-group.component */ 52400);
 /* harmony import */ var src_app_material_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/material.module */ 63806);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _continue_popup_modal_continue_popup_modal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./continue-popup-modal/continue-popup-modal.component */ 5702);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 2316);
+
 
 
 
@@ -1610,30 +1639,31 @@ __webpack_require__.r(__webpack_exports__);
 class PartyModule {
 }
 PartyModule.ɵfac = function PartyModule_Factory(t) { return new (t || PartyModule)(); };
-PartyModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineNgModule"]({ type: PartyModule });
-PartyModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjector"]({ imports: [[
-            _angular_common__WEBPACK_IMPORTED_MODULE_8__.CommonModule,
-            _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__.MatIconModule,
+PartyModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineNgModule"]({ type: PartyModule });
+PartyModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjector"]({ imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_9__.CommonModule,
+            _angular_material_icon__WEBPACK_IMPORTED_MODULE_10__.MatIconModule,
             _party_routing_module__WEBPACK_IMPORTED_MODULE_0__.PartyRoutingModule,
-            _angular_router__WEBPACK_IMPORTED_MODULE_10__.RouterModule,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_11__.FormsModule,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_11__.ReactiveFormsModule,
-            _angular_material_paginator__WEBPACK_IMPORTED_MODULE_12__.MatPaginatorModule,
-            _angular_material_form_field__WEBPACK_IMPORTED_MODULE_13__.MatFormFieldModule,
+            _angular_router__WEBPACK_IMPORTED_MODULE_11__.RouterModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormsModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_12__.ReactiveFormsModule,
+            _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__.MatPaginatorModule,
+            _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__.MatFormFieldModule,
             src_app_material_module__WEBPACK_IMPORTED_MODULE_6__.MaterialExampleModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵsetNgModuleScope"](PartyModule, { declarations: [_party_list_party_list_component__WEBPACK_IMPORTED_MODULE_1__.PartyListComponent,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵsetNgModuleScope"](PartyModule, { declarations: [_party_list_party_list_component__WEBPACK_IMPORTED_MODULE_1__.PartyListComponent,
         _party_group_list_party_group_list_component__WEBPACK_IMPORTED_MODULE_2__.PartyGroupListComponent,
         _delete_modal_delete_modal_component__WEBPACK_IMPORTED_MODULE_3__.DeleteModalComponent,
         _view_party_view_party_component__WEBPACK_IMPORTED_MODULE_4__.ViewPartyComponent,
-        _view_party_group_view_party_group_component__WEBPACK_IMPORTED_MODULE_5__.ViewPartyGroupComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_8__.CommonModule,
-        _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__.MatIconModule,
+        _view_party_group_view_party_group_component__WEBPACK_IMPORTED_MODULE_5__.ViewPartyGroupComponent,
+        _continue_popup_modal_continue_popup_modal_component__WEBPACK_IMPORTED_MODULE_7__.ContinuePopupModalComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_9__.CommonModule,
+        _angular_material_icon__WEBPACK_IMPORTED_MODULE_10__.MatIconModule,
         _party_routing_module__WEBPACK_IMPORTED_MODULE_0__.PartyRoutingModule,
-        _angular_router__WEBPACK_IMPORTED_MODULE_10__.RouterModule,
-        _angular_forms__WEBPACK_IMPORTED_MODULE_11__.FormsModule,
-        _angular_forms__WEBPACK_IMPORTED_MODULE_11__.ReactiveFormsModule,
-        _angular_material_paginator__WEBPACK_IMPORTED_MODULE_12__.MatPaginatorModule,
-        _angular_material_form_field__WEBPACK_IMPORTED_MODULE_13__.MatFormFieldModule,
+        _angular_router__WEBPACK_IMPORTED_MODULE_11__.RouterModule,
+        _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormsModule,
+        _angular_forms__WEBPACK_IMPORTED_MODULE_12__.ReactiveFormsModule,
+        _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__.MatPaginatorModule,
+        _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__.MatFormFieldModule,
         src_app_material_module__WEBPACK_IMPORTED_MODULE_6__.MaterialExampleModule] }); })();
 
 

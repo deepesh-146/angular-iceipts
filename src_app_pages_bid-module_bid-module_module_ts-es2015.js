@@ -352,8 +352,11 @@ class NewAddBidClientComponent {
         return this.quotePriceForm.controls;
     }
     searchProduct() {
-        this.biddingService.getAllProductsByUserSearch({}, this.currentUser.id, this.myControl.value)
+        this.biddingService.getAllProductsByUserSearch({}, this.currentUser.id, this.myControl.value, this.partyPageSize, (this.currentPageNo + 1))
             .then((res) => {
+            this.toatlPages = res.data.totalPages;
+            this.totalrow = res.data.totalRows;
+            this.p = res.data.currentPage;
             this.searchedProduct = res.data.pageData;
             this.prodName = this.searchedProduct[0].itemName;
             this.prodId = this.searchedProduct[0].id,
@@ -363,8 +366,11 @@ class NewAddBidClientComponent {
         });
     }
     selectedProduct(itemName) {
-        this.biddingService.getAllProductsByUserSearch({}, this.currentUser.id, itemName)
+        this.biddingService.getAllProductsByUserSearch({}, this.currentUser.id, itemName, this.partyPageSize, (this.currentPageNo + 1))
             .then((res) => {
+            this.toatlPages = res.data.totalPages;
+            this.totalrow = res.data.totalRows;
+            this.p = res.data.currentPage;
             this.searchedProduct = res.data.pageData;
             this.prodName = res.data.pageData[0].itemName;
             this.prodId = res.data.pageData[0].id;

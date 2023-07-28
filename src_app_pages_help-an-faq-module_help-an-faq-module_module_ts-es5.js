@@ -324,9 +324,9 @@
       _HelpComponentComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
         type: _HelpComponentComponent,
         selectors: [["app-help-component"]],
-        decls: 40,
+        decls: 38,
         vars: 0,
-        consts: [[1, "card", "bg-white"], [1, "card-header", 2, "background-color", "rgba(255, 235, 210, 1) !important"], [1, "row"], [1, "col-lg-4", "col-md-4", "col-sm-12", "col-xl-4"], [1, "col-lg-4", "col-md-4", "col-sm-12", "col-xl-4", "text-center"], [1, "headingText", "font-weight-bold"], [1, "font-weight-normal"], [1, "d-flex", "justify-content-center"], ["type", "search", "id", "searchInput", "placeholder", "Search Here", 1, "form-control", "pe-5", "inputWidth"], [1, "card-body", "bg-white"], [1, "container"], ["type", "button", "routerLink", "./sale-faq", "routerLinkActive", "active", 1, "btn", "topButton", "mx-2", "ps-4", "pe-4", 2, "background-color", "hsla(120, 1%, 65%, 0.371)"], ["type", "button", "routerLink", "./purchase-faq", "routerLinkActive", "active", 1, "btn", "topButton", "mx-2", 2, "background-color", "hsla(120, 1%, 65%, 0.371)"], ["type", "button", "routerLink", "./product-faq", "routerLinkActive", "active", 1, "btn", "topButton", "mx-2", 2, "background-color", "hsla(120, 1%, 65%, 0.371)"], [1, "row", "mt-5"], [1, "col-lg-2", "col-md-2", "col-sm-12", "col-xl-2"], [1, "col-lg-8", "col-md-8", "col-sm-12", "col-xl-8", "card", "m-2", "p-5"], [1, "card-footer", "container-fluid", "card", "mt-2", "mb-5", 2, "background-color", "rgba(255, 235, 210, 1) !important"], [1, "col-12"], [1, "row", "mt-2"], [1, "col-lg-6"], [1, "fw-bold"], ["type", "button", 1, "btn", 2, "float", "right !important", "border-radius", "5px!important", "background-color", "rgba(17, 1, 82, 1) !important", "color", "white!important", 3, "click"]],
+        consts: [[1, "card", "bg-white"], [1, "card-header", 2, "background-color", "rgba(255, 235, 210, 1) !important"], [1, "row"], [1, "col-lg-4", "col-md-4", "col-sm-12", "col-xl-4"], [1, "col-lg-4", "col-md-4", "col-sm-12", "col-xl-4", "text-center"], [1, "headingText", "font-weight-bold"], [1, "font-weight-normal"], [1, "d-flex", "justify-content-center"], ["type", "search", "id", "searchInput", "placeholder", "Search Here", 1, "form-control", "pe-5", "inputWidth"], [1, "card-body", "bg-white"], [1, "container"], ["type", "button", "routerLink", "./sale-faq", "routerLinkActive", "active", 1, "btn", "topButton", "mx-2", "ps-4", "pe-4", 2, "background-color", "hsla(120, 1%, 65%, 0.371)"], ["type", "button", "routerLink", "./purchase-faq", "routerLinkActive", "active", 1, "btn", "topButton", "mx-2", 2, "background-color", "hsla(120, 1%, 65%, 0.371)"], ["type", "button", "routerLink", "./product-faq", "routerLinkActive", "active", 1, "btn", "topButton", "mx-2", 2, "background-color", "hsla(120, 1%, 65%, 0.371)"], [1, "row", "mt-5"], [1, "col-lg-2", "col-md-2", "col-sm-12", "col-xl-2"], [1, "col-lg-8", "col-md-8", "col-sm-12", "col-xl-8", "card", "m-2", "p-5"], [1, "card-footer", "container-fluid", "card", "mt-2", "mb-5", 2, "background-color", "rgba(255, 235, 210, 1) !important"], [1, "col-12"], [1, "row", "mt-2"], [1, "col-lg-6"], [1, "fw-bold"]],
         template: function HelpComponentComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -437,14 +437,6 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](36, "p");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "button", 22);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HelpComponentComponent_Template_button_click_37_listener() {
-              return ctx.OpenQuestionModal();
-            });
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](38, "Any Query Or Issue");
-
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -455,9 +447,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](39, "div");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](37, "div");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
           }

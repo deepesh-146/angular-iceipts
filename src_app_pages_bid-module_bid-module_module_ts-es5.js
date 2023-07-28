@@ -675,7 +675,10 @@
           value: function searchProduct() {
             var _this3 = this;
 
-            this.biddingService.getAllProductsByUserSearch({}, this.currentUser.id, this.myControl.value).then(function (res) {
+            this.biddingService.getAllProductsByUserSearch({}, this.currentUser.id, this.myControl.value, this.partyPageSize, this.currentPageNo + 1).then(function (res) {
+              _this3.toatlPages = res.data.totalPages;
+              _this3.totalrow = res.data.totalRows;
+              _this3.p = res.data.currentPage;
               _this3.searchedProduct = res.data.pageData;
               _this3.prodName = _this3.searchedProduct[0].itemName;
               _this3.prodId = _this3.searchedProduct[0].id, _this3.quotePriceForm.patchValue({
@@ -688,7 +691,10 @@
           value: function selectedProduct(itemName) {
             var _this4 = this;
 
-            this.biddingService.getAllProductsByUserSearch({}, this.currentUser.id, itemName).then(function (res) {
+            this.biddingService.getAllProductsByUserSearch({}, this.currentUser.id, itemName, this.partyPageSize, this.currentPageNo + 1).then(function (res) {
+              _this4.toatlPages = res.data.totalPages;
+              _this4.totalrow = res.data.totalRows;
+              _this4.p = res.data.currentPage;
               _this4.searchedProduct = res.data.pageData;
               _this4.prodName = res.data.pageData[0].itemName;
               _this4.prodId = res.data.pageData[0].id;
